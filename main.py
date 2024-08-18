@@ -20,7 +20,7 @@ english = ReplyKeyboardMarkup(
 
 
 API_TOKEN = '7357998875:AAHfmVasOiD-l-mVRatp7mryibK_yGJAdus'
-CHANNELS = ['-1002174544605', '-1002066514610']  # Channels to subscribe to
+CHANNELS = ['-1002112796283', '-1002066514610', '-1002174544605']  # Channels to subscribe to
 
 logging.basicConfig(level=logging.INFO)
 
