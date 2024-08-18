@@ -19,8 +19,8 @@ english = ReplyKeyboardMarkup(
 )
 
 
-API_TOKEN = '7357998875:AAF66o7BFnNZSvWSJDi1w4loCklSgTYHl00'
-CHANNELS = ['-1002174544605']  # Channels to subscribe to
+API_TOKEN = '7357998875:AAHfmVasOiD-l-mVRatp7mryibK_yGJAdus'
+CHANNELS = ['-1002174544605', '-1002066514610']  # Channels to subscribe to
 
 logging.basicConfig(level=logging.INFO)
 
@@ -40,13 +40,21 @@ async def send_welcome(message: types.Message):
         keyboard = InlineKeyboardMarkup(row_width=1)  # 1 button per row
         subscribe_button = InlineKeyboardButton(
             text="Join Our Channel 📢",
-            url="https://t.me/+9BHjNg7-zCI0NDg6"  # Adjust URL to your channel or a group link
+            url="https://t.me/+-CS-u0oady45YTIy"  # Adjust URL to your channel or a group link
         )
+        subscribe_button1 = InlineKeyboardButton(
+            text="Join Our Channel 📢",
+            url="https://t.me/+rKS_9RfpZHs5ZDEy"  # Adjust URL to your channel or a group link
+        )
+        subscribe_button2 = InlineKeyboardButton(
+            text="Join Our Channel 📢",
+            url="https://t.me/+VhHZJRrsrJViNDNi"  # Adjust URL to your channel or a group link
+        )       
         submit_button = InlineKeyboardButton(
             text="Submit ✔️",
             callback_data='submit'
         )
-        keyboard.add(subscribe_button, submit_button)
+        keyboard.add(subscribe_button,  subscribe_button1, subscribe_button2, submit_button)
         await message.answer(
             "Please subscribe to our channels to access this bot. Click the buttons below to join and submit your response:",
             reply_markup=keyboard
